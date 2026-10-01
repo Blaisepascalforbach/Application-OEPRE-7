@@ -1,0 +1,14 @@
+OEPRE Forbach — version GitHub avec audio des 24 entrées et repères officiels
+
+Contenu du paquet :
+- index.html : application, parcours A1/A2 (10 questions chacun), audio français + langue d’appui pour les 24 entrées des axes et du tuteur IA ;
+- sw.js : mise à jour hors ligne et prise en charge des MP3 ;
+- manifest.webmanifest et icônes.
+
+Dans la fiche « Le DELF et les démarches », le titre et l’explication restent affichés en français. La traduction apparaît uniquement lorsque l’on appuie sur le bouton de traduction.
+
+Les boutons 🔊 utilisent les voix présentes sur le téléphone tant que les MP3 ne sont pas publiés. La disponibilité des langues dépend de l’appareil.
+
+Pour installer : décompressez ce paquet à la racine du dépôt GitHub Pages en remplaçant les fichiers existants, puis attendez le rechargement. Le cache v22 met l’application à jour. Si elle reste ancienne, fermez-la puis rouvrez-la.
+
+Voix Google, plus tard : utilisez le fichier generateur-audio.html séparément sur votre ordinateur, choisissez index.html et saisissez la clé uniquement dans le générateur local. Ne publiez jamais le générateur ni la clé dans le dépôt. Décompressez ensuite le ZIP audio produit à la racine du dépôt (dossier audio/).

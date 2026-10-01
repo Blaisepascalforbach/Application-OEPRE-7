@@ -1,0 +1,5 @@
+Application OEPRE Forbach — affichage français rétabli pour la fiche DELF — 1er octobre 2026
+Parcours du défi : choix A1 ou A2, 10 questions progressives par parcours.
+Audio : 24 entrées des trois axes et du tuteur IA, écoute en français et dans la langue d’appui.
+Démarches : DELF, niveaux A2/B1/B2 et examen civique, avec liens officiels vérifiés le 1er octobre 2026.
+Service worker : cache v22 pour déclencher la mise à jour sur les téléphones.
