@@ -1,6 +1,6 @@
-Application OEPRE Forbach — audit de langue français + traduction d’appui — 3 octobre 2026
+Application OEPRE Forbach — vie sociale et culturelle — 3 octobre 2026
 Français conservé comme langue de présentation dans tous les axes, annuaires, aides et liens.
 Traductions de contenu disponibles à la demande ; aide courte des numéros d’urgence affichée sous le libellé français.
-Audio : 24 entrées des trois axes et du tuteur IA, écoute en français et dans la langue d’appui.
+Audio : écoute en français et dans la langue d’appui pour les ressources des axes, du tuteur IA et de la nouvelle entrée vie sociale et culturelle.
 Parcours du défi : choix A1 ou A2, 10 questions chacun, français affiché en premier et traduction en appui.
-Service worker : cache v25 pour déclencher la mise à jour sur les téléphones.
+Service worker : cache v26 pour déclencher la mise à jour sur les téléphones.

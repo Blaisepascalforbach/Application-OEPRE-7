@@ -222,8 +222,8 @@
             <button onclick="showScreen('screen-vie-locale')" class="btn-3d w-full bg-amber-50 rounded-2xl p-4 border-2 border-amber-200 flex items-center text-left">
                 <div class="text-3xl mr-4 p-3 bg-white rounded-2xl">🤝</div>
                 <div class="flex-grow">
-                    <h3 class="font-black text-base text-amber-900">Centres sociaux et vie locale</h3>
-                    <div class="text-xs text-amber-700 font-bold mt-1">Activités, ateliers et rencontres à Forbach</div>
+                    <h3 class="font-black text-base text-amber-900">Vie sociale et culturelle</h3>
+                    <div class="text-xs text-amber-700 font-bold mt-1">Rencontres, activités et culture à Forbach</div>
                 </div>
             </button>
 
@@ -604,25 +604,65 @@
     </div>
 
     <div id="screen-vie-locale" class="screen">
-        <h2 class="text-2xl font-black text-amber-900 mb-2">Centres sociaux et vie locale</h2>
-        <p class="text-sm font-bold text-amber-800 mb-5" data-i18n-support="asbh_intro_trad">À Forbach, les centres sociaux ASBH proposent des activités, des ateliers et des temps de rencontre. Contactez le centre pour connaître ce qui est proposé.</p>
-        <div class="space-y-4 overflow-y-auto pb-4">
+        <h2 class="text-2xl font-black text-amber-900 mb-2">Vie sociale et culturelle à Forbach</h2>
+        <p class="text-sm font-bold text-amber-800 mb-2" data-i18n-support="culture_intro_trad">À Forbach, des lieux vous permettent de rencontrer d’autres personnes, de faire des activités et de découvrir la culture.</p>
+        <span hidden data-audio-fr="culture_intro_trad">À Forbach, des lieux vous permettent de rencontrer d’autres personnes, de faire des activités et de découvrir la culture.</span>
+        <button type="button" class="btn-audio flex items-center text-xs font-black px-3 py-2 rounded-xl border w-full justify-center text-slate-700 bg-slate-100 border-slate-200 mb-3" data-audio-lang="Francais" data-audio-key="culture_intro_trad" onclick="playAudio(this)" aria-pressed="false"><span class="mr-2 audio-icon" aria-hidden="true">🔊</span><span class="audio-text">Écouter en français</span></button>
+        <div class="space-y-3 overflow-y-auto pb-4">
             <section class="bg-white p-4 rounded-2xl border-2 border-amber-200 shadow-sm">
-                <h3 class="font-black text-base text-slate-900 mb-1">Centre social ASBH de Bellevue</h3>
-                <p class="text-xs text-slate-500 font-semibold mb-2">9 rue des Gardes, 57600 Forbach · 03 87 88 59 35</p>
-                <button onclick="openMap('Centre social ASBH Bellevue 9 rue des Gardes Forbach')" class="flex items-center justify-center text-xs font-black text-amber-900 bg-amber-50 px-3 py-2 rounded-xl border border-amber-200 w-full">📍 Carte</button>
+                <h3 class="font-black text-base text-slate-900 mb-1">🤝 Rencontrer et participer · Centres sociaux ASBH</h3>
+                <p class="text-xs text-slate-600 font-semibold mb-2" data-i18n-support="asbh_intro_trad">Les centres sociaux proposent des activités et des rencontres. Contactez le centre pour connaître le programme.</p>
+                <span hidden data-audio-fr="asbh_intro_trad">Les centres sociaux ASBH proposent des activités et des rencontres. Contactez le centre pour connaître le programme.</span>
+                <button type="button" class="btn-audio flex items-center text-xs font-black px-3 py-2 rounded-xl border w-full justify-center text-slate-700 bg-slate-100 border-slate-200 mb-2" data-audio-lang="Francais" data-audio-key="asbh_intro_trad" onclick="playAudio(this)" aria-pressed="false"><span class="mr-2 audio-icon" aria-hidden="true">🔊</span><span class="audio-text">Écouter en français</span></button>
+                <div class="mt-2">
+                    <details class="rounded-xl bg-amber-50 border border-amber-100 p-3">
+                        <summary class="cursor-pointer text-sm font-black text-amber-950">Voir les centres de Forbach</summary>
+                        <ul class="mt-2 space-y-2 text-xs font-semibold text-slate-700">
+                            <li><strong>Bellevue</strong> · 9 rue des Gardes <button onclick="openMap('Centre social ASBH Bellevue 9 rue des Gardes Forbach')" class="ml-1 underline text-amber-900">Carte</button></li>
+                            <li><strong>Bruch · Foyer Mille Clubs</strong> · 9 place des Bouleaux <button onclick="openMap('ASBH Foyer Mille Clubs 9 place des Bouleaux Forbach')" class="ml-1 underline text-amber-900">Carte</button></li>
+                            <li><strong>Wiesberg</strong> · 1 A avenue de l’Europe <button onclick="openMap('Centre social ASBH Wiesberg 1 A avenue de l’Europe Forbach')" class="ml-1 underline text-amber-900">Carte</button></li>
+                        </ul>
+                    </details>
+                </div>
+                <a href="https://www.asbh.fr/" target="_blank" rel="noopener" class="mt-2 flex items-center justify-center text-xs font-black text-amber-900 bg-amber-100 px-3 py-2 rounded-xl border border-amber-300 no-underline">🌐 Activités de l’ASBH</a>
             </section>
-            <section class="bg-white p-4 rounded-2xl border-2 border-amber-200 shadow-sm">
-                <h3 class="font-black text-base text-slate-900 mb-1">Foyer « Mille Clubs » · quartier du Bruch</h3>
-                <p class="text-xs text-slate-500 font-semibold mb-2">9 place des Bouleaux, 57600 Forbach · 03 87 88 53 34</p>
-                <button onclick="openMap('ASBH Foyer Mille Clubs 9 place des Bouleaux Forbach')" class="flex items-center justify-center text-xs font-black text-amber-900 bg-amber-50 px-3 py-2 rounded-xl border border-amber-200 w-full">📍 Carte</button>
+
+            <section class="bg-white p-4 rounded-2xl border-2 border-sky-200 shadow-sm">
+                <h3 class="font-black text-base text-slate-900 mb-1">📚 Lire et découvrir · Médiathèque Roger-Bichelberger</h3>
+                <p class="text-xs text-slate-600 font-semibold mb-2" data-i18n-support="media_forbach_trad">La médiathèque propose des livres, des ressources numériques et des animations. Renseignez-vous sur les activités et l’inscription.</p>
+                <span hidden data-audio-fr="media_forbach_trad">La médiathèque propose des livres, des ressources numériques et des animations. Renseignez-vous sur les activités et l’inscription.</span>
+                <button type="button" class="btn-audio flex items-center text-xs font-black px-3 py-2 rounded-xl border w-full justify-center text-slate-700 bg-slate-100 border-slate-200 mb-2" data-audio-lang="Francais" data-audio-key="media_forbach_trad" onclick="playAudio(this)" aria-pressed="false"><span class="mr-2 audio-icon" aria-hidden="true">🔊</span><span class="audio-text">Écouter en français</span></button>
+                <p class="text-xs text-slate-500 font-semibold mb-2">4 place Aristide-Briand · 03 87 84 61 90</p>
+                <a href="https://www.mediatheque-forbach.net/" target="_blank" rel="noopener" class="flex items-center justify-center text-xs font-black text-sky-900 bg-sky-50 px-3 py-2 rounded-xl border border-sky-200 no-underline">🌐 Site de la médiathèque</a>
             </section>
-            <section class="bg-white p-4 rounded-2xl border-2 border-amber-200 shadow-sm">
-                <h3 class="font-black text-base text-slate-900 mb-1">Centre social ASBH du Wiesberg</h3>
-                <p class="text-xs text-slate-500 font-semibold mb-2">1 A avenue de l’Europe, 57600 Forbach · 03 87 85 18 41</p>
-                <button onclick="openMap('Centre social ASBH Wiesberg 1 A avenue de l’Europe Forbach')" class="flex items-center justify-center text-xs font-black text-amber-900 bg-amber-50 px-3 py-2 rounded-xl border border-amber-200 w-full">📍 Carte</button>
+
+            <section class="bg-white p-4 rounded-2xl border-2 border-rose-200 shadow-sm">
+                <h3 class="font-black text-base text-slate-900 mb-1">🎭 Sortir et découvrir des cultures · La Syna</h3>
+                <p class="text-xs text-slate-600 font-semibold mb-2" data-i18n-support="syna_forbach_trad">La Syna organise des spectacles, des expositions et des événements pour découvrir différentes cultures. Consultez le programme.</p>
+                <span hidden data-audio-fr="syna_forbach_trad">La Syna organise des spectacles, des expositions et des événements pour découvrir différentes cultures. Consultez le programme.</span>
+                <button type="button" class="btn-audio flex items-center text-xs font-black px-3 py-2 rounded-xl border w-full justify-center text-slate-700 bg-slate-100 border-slate-200 mb-2" data-audio-lang="Francais" data-audio-key="syna_forbach_trad" onclick="playAudio(this)" aria-pressed="false"><span class="mr-2 audio-icon" aria-hidden="true">🔊</span><span class="audio-text">Écouter en français</span></button>
+                <p class="text-xs text-slate-500 font-semibold mb-2">Ancienne synagogue · 98 avenue Saint-Rémy</p>
+                <a href="https://www.mairie-forbach.fr/culture" target="_blank" rel="noopener" class="flex items-center justify-center text-xs font-black text-rose-900 bg-rose-50 px-3 py-2 rounded-xl border border-rose-200 no-underline">🌐 Programme culturel de la Ville</a>
             </section>
-            <a href="https://www.asbh.fr/" target="_blank" rel="noopener" class="flex items-center justify-center text-sm font-black text-amber-900 bg-amber-100 px-4 py-3 rounded-xl border border-amber-300 no-underline">🌐 Découvrir l’ASBH et ses activités</a>
+
+            <section class="bg-white p-4 rounded-2xl border-2 border-violet-200 shadow-sm">
+                <h3 class="font-black text-base text-slate-900 mb-1">🎲 Jouer avec les jeunes enfants · Ludothèque Léontine-Kamba</h3>
+                <p class="text-xs font-black text-violet-800 mb-2">Pour les enfants de 0 à 6 ans</p>
+                <p class="text-xs text-slate-600 font-semibold mb-2" data-i18n-support="ludo_forbach_trad">La ludothèque propose des jeux et des activités aux enfants de 0 à 6 ans. Des temps d’échange sont aussi proposés aux parents.</p>
+                <span hidden data-audio-fr="ludo_forbach_trad">La ludothèque propose des jeux et des activités aux enfants de 0 à 6 ans. Des temps d’échange sont aussi proposés aux parents.</span>
+                <button type="button" class="btn-audio flex items-center text-xs font-black px-3 py-2 rounded-xl border w-full justify-center text-slate-700 bg-slate-100 border-slate-200 mb-2" data-audio-lang="Francais" data-audio-key="ludo_forbach_trad" onclick="playAudio(this)" aria-pressed="false"><span class="mr-2 audio-icon" aria-hidden="true">🔊</span><span class="audio-text">Écouter en français</span></button>
+                <p class="text-xs text-slate-500 font-semibold mb-2">2 rue Félix-Barth · 06 85 32 77 00</p>
+                <a href="https://www.mairie-forbach.fr/petite-enfance" target="_blank" rel="noopener" class="flex items-center justify-center text-xs font-black text-violet-900 bg-violet-50 px-3 py-2 rounded-xl border border-violet-200 no-underline">🌐 Informations de la Ville</a>
+            </section>
+
+            <section class="bg-slate-50 p-3 rounded-xl border border-slate-200">
+                <h3 class="font-black text-sm text-slate-800 mb-1">Pour découvrir aussi</h3>
+                <p class="text-xs text-slate-600 font-semibold mb-2" data-i18n-support="culture_more_trad">La Maison des Cultures Numériques, Le Carreau et le Conservatoire proposent d’autres activités culturelles.</p>
+                <span hidden data-audio-fr="culture_more_trad">La Maison des Cultures Numériques, Le Carreau et le Conservatoire proposent d’autres activités culturelles.</span>
+                <button type="button" class="btn-audio flex items-center text-xs font-black px-3 py-2 rounded-xl border w-full justify-center text-slate-700 bg-slate-100 border-slate-200 mb-2" data-audio-lang="Francais" data-audio-key="culture_more_trad" onclick="playAudio(this)" aria-pressed="false"><span class="mr-2 audio-icon" aria-hidden="true">🔊</span><span class="audio-text">Écouter en français</span></button>
+                <a href="https://www.mairie-forbach.fr/culture" target="_blank" rel="noopener" class="text-xs font-black text-indigo-800 underline">Voir les autres lieux culturels de Forbach</a>
+            </section>
+            <p class="text-[11px] text-slate-500 font-semibold px-1">Les programmes et conditions d’inscription peuvent changer. Vérifiez les informations auprès de chaque lieu.</p>
         </div>
     </div>
 
@@ -711,6 +751,11 @@
 
             admin_mairie_trad: "Gjendja civile dhe shërbimet bashkiake",
             asbh_intro_trad: 'Në Forbach, qendrat sociale ASBH ofrojnë aktivitete, punëtori dhe takime. Kontaktoni qendrën për të mësuar se çfarë propozohet.',
+            culture_intro_trad: "Në Forbach, disa vende ju ndihmojnë të takoni njerëz të tjerë, të merrni pjesë në aktivitete dhe të zbuloni kulturën.",
+            media_forbach_trad: "Mediatheka ofron libra, burime digjitale dhe aktivitete. Pyesni për veprimtaritë dhe regjistrimin.",
+            syna_forbach_trad: "La Syna organizon shfaqje, ekspozita dhe veprimtari për të zbuluar kultura të ndryshme. Shikoni programin.",
+            ludo_forbach_trad: "Ludoteka ofron lojëra dhe aktivitete për fëmijët nga 0 deri në 6 vjeç. Ka edhe takime për prindërit.",
+            culture_more_trad: "Maison des Cultures Numériques, Le Carreau dhe Konservatori ofrojnë veprimtari të tjera kulturore.",
             admin_ft_trad: 'Kërkimi i punës, regjistrimi dhe mbështetja',
             admin_caf_trad: 'Ndihma për familjet, strehimi dhe procedurat e CAF',
             intro_text: "Mirë se vini në Liceun Blaise Pascal! Ky aplikacion ju prezanton tri drejtimet e OEPRE-së: të mësoni frëngjisht, të kuptoni më mirë vlerat e Republikës dhe të fitoni pavarësi në procedurat tuaja, në shkollë dhe në jetën e përditshme.",
@@ -783,6 +828,11 @@
 
             admin_mairie_trad: "Civil registration and municipal services",
             asbh_intro_trad: 'In Forbach, ASBH community centers offer activities, workshops, and opportunities to meet. Contact the center to find out what is available.',
+            culture_intro_trad: "In Forbach, these places help you meet people, take part in activities and discover culture.",
+            media_forbach_trad: "The media library offers books, digital resources and activities. Ask about activities and registration.",
+            syna_forbach_trad: "La Syna organises shows, exhibitions and events where you can discover different cultures. Check the programme.",
+            ludo_forbach_trad: "The play library offers games and activities for children aged 0 to 6. It also offers opportunities for parents to meet.",
+            culture_more_trad: "The Maison des Cultures Numériques, Le Carreau and the Conservatoire offer other cultural activities.",
             admin_ft_trad: 'Job search, registration, and support',
             admin_caf_trad: 'Family benefits, housing, and CAF services',
             intro_text: "Welcome to Lycée Blaise Pascal! This app introduces the three OEPRE areas: learning French, understanding the values of the French Republic, and becoming more independent with everyday steps, at school and beyond.",
@@ -855,6 +905,11 @@
 
             admin_mairie_trad: "الحالة المدنية والخدمات البلدية",
             asbh_intro_trad: 'في فورباك، تقدم المراكز الاجتماعية التابعة لجمعية ASBH أنشطة وورشات وفرصًا للقاء. تواصلوا مع المركز لمعرفة ما هو متاح.',
+            culture_intro_trad: "في فورباخ، تساعدكم هذه الأماكن على لقاء أشخاص آخرين والمشاركة في أنشطة واكتشاف الثقافة.",
+            media_forbach_trad: "تقدم المكتبة كتباً وموارد رقمية وأنشطة. اسألوا عن الأنشطة والتسجيل.",
+            syna_forbach_trad: "تنظم La Syna عروضاً ومعارض وفعاليات لاكتشاف ثقافات مختلفة. اطلعوا على البرنامج.",
+            ludo_forbach_trad: "تقدم مكتبة الألعاب ألعاباً وأنشطة للأطفال من الولادة حتى سن السادسة. كما تنظم لقاءات للآباء.",
+            culture_more_trad: "تقدم Maison des Cultures Numériques وLe Carreau والمعهد الموسيقي أنشطة ثقافية أخرى.",
             admin_ft_trad: 'البحث عن عمل والتسجيل والمواكبة',
             admin_caf_trad: 'مساعدات الأسرة والسكن وإجراءات صندوق المخصصات العائلية',
             intro_text: "مرحبًا بكم في ثانوية بليز باسكال! يعرّفكم هذا التطبيق بالمحاور الثلاثة لبرنامج OEPRE: تعلّم الفرنسية، وفهم قيم الجمهورية بشكل أفضل، واكتساب الاستقلالية في الإجراءات اليومية في المدرسة وخارجها.",
@@ -927,6 +982,11 @@
 
             admin_mairie_trad: "Քաղաքացիական կացություն և քաղաքային ծառայություններ",
             asbh_intro_trad: 'Ֆորբախում ASBH-ի սոցիալական կենտրոններն առաջարկում են միջոցառումներ, աշխատարաններ և հանդիպումներ։ Կապվեք կենտրոնի հետ՝ իմանալու համար, թե ինչ է առաջարկվում։',
+            culture_intro_trad: "Ֆորբախում այս վայրերը հնարավորություն են տալիս հանդիպել մարդկանց, մասնակցել միջոցառումների և բացահայտել մշակույթը։",
+            media_forbach_trad: "Մեդիագրադարանը առաջարկում է գրքեր, թվային նյութեր և միջոցառումներ։ Հարցրեք միջոցառումների և գրանցման մասին։",
+            syna_forbach_trad: "La Syna-ն կազմակերպում է ներկայացումներ, ցուցահանդեսներ և տարբեր մշակույթները բացահայտելու միջոցառումներ։ Նայեք ծրագրին։",
+            ludo_forbach_trad: "Խաղադարանը խաղեր և միջոցառումներ է առաջարկում 0–6 տարեկան երեխաների համար։ Այն նաև ծնողների հանդիպումներ է կազմակերպում։",
+            culture_more_trad: "Maison des Cultures Numériques-ը, Le Carreau-ն և Կոնսերվատորիան առաջարկում են մշակութային այլ միջոցառումներ։",
             admin_ft_trad: 'Աշխատանքի որոնում, գրանցում և աջակցություն',
             admin_caf_trad: 'Ընտանեկան նպաստներ, բնակարան և CAF-ի դիմումներ',
             intro_text: "Բարի գալուստ Բլեզ Պասկալ լիցեյ։ Այս հավելվածը ներկայացնում է OEPRE-ի երեք ուղղությունները՝ սովորել ֆրանսերեն, ավելի լավ հասկանալ Հանրապետության արժեքները և ինքնուրույն կատարել առօրյա քայլերը՝ դպրոցում և առօրյա կյանքում։",
@@ -999,6 +1059,11 @@
 
             admin_mairie_trad: "ثبت احوال و خدمات شهرداری",
             asbh_intro_trad: 'در فورباخ، مرکزهای اجتماعی ASBH فعالیت\u200cها، کارگاه\u200cها و فرصت\u200cهایی برای دیدار ارائه می\u200cکنند. برای اطلاع از برنامه\u200cها با مرکز تماس بگیرید.',
+            culture_intro_trad: "در فورباخ، این مکان‌ها به شما کمک می‌کنند با مردم آشنا شوید، در فعالیت‌ها شرکت کنید و فرهنگ را بشناسید.",
+            media_forbach_trad: "کتابخانه رسانه‌ای کتاب، منابع دیجیتالی و فعالیت‌ها دارد. درباره فعالیت‌ها و ثبت‌نام بپرسید.",
+            syna_forbach_trad: "La Syna برنامه‌های نمایشی، نمایشگاه‌ها و رویدادهایی برای آشنایی با فرهنگ‌های مختلف برگزار می‌کند. برنامه را ببینید.",
+            ludo_forbach_trad: "کتابخانه بازی برای کودکان ۰ تا ۶ سال بازی و فعالیت دارد. برای والدین نیز نشست‌هایی برگزار می‌شود.",
+            culture_more_trad: "خانه فرهنگ‌های دیجیتال، Le Carreau و کنسرواتوار فعالیت‌های فرهنگی دیگری ارائه می‌کنند.",
             admin_ft_trad: 'جست\u200cوجوی کار، ثبت\u200cنام و پشتیبانی',
             admin_caf_trad: 'کمک\u200cهزینه\u200cهای خانواده، مسکن و امور CAF',
             intro_text: "به دبیرستان بلز پاسکال خوش آمدید! این برنامه سه محور OEPRE را معرفی می\u200cکند: یادگیری زبان فرانسه، شناخت بهتر ارزش\u200cهای جمهوری و مستقل\u200cتر شدن در انجام کارهای روزمره، در مدرسه و در زندگی روزانه.",
@@ -1071,6 +1136,11 @@
 
             admin_mairie_trad: "სამოქალაქო მდგომარეობა და მუნიციპალური მომსახურება",
             asbh_intro_trad: 'ფორბახში ASBH-ის სოციალური ცენტრები აქტივობებს, სამუშაო შეხვედრებსა და შეხვედრის შესაძლებლობებს სთავაზობენ. შემოთავაზებების გასაგებად დაუკავშირდით ცენტრს.',
+            culture_intro_trad: "ფორბახში ეს ადგილები ადამიანებთან შეხვედრის, აქტივობებში მონაწილეობისა და კულტურის გაცნობის შესაძლებლობას გაძლევთ.",
+            media_forbach_trad: "მედიათეკა გთავაზობთ წიგნებს, ციფრულ რესურსებსა და აქტივობებს. იკითხეთ ღონისძიებებისა და რეგისტრაციის შესახებ.",
+            syna_forbach_trad: "La Syna აწყობს წარმოდგენებს, გამოფენებსა და ღონისძიებებს სხვადასხვა კულტურის გასაცნობად. გაეცანით პროგრამას.",
+            ludo_forbach_trad: "სათამაშო ბიბლიოთეკა თამაშებსა და აქტივობებს სთავაზობს 0-დან 6 წლამდე ბავშვებს. მშობლებისთვისაც იმართება შეხვედრები.",
+            culture_more_trad: "Maison des Cultures Numériques, Le Carreau და კონსერვატორია სხვა კულტურულ აქტივობებს გვთავაზობენ.",
             admin_ft_trad: 'სამუშაოს ძიება, რეგისტრაცია და მხარდაჭერა',
             admin_caf_trad: 'ოჯახის დახმარება, საცხოვრებელი და CAF-ის მომსახურება',
             intro_text: "მოგესალმებით ბლეზ პასკალის ლიცეუმში! ეს აპლიკაცია წარმოგიდგენთ OEPRE-ის სამ მიმართულებას: ფრანგულის სწავლას, რესპუბლიკის ღირებულებების უკეთ გაგებას და ყოველდღიური საქმეების დამოუკიდებლად მოგვარებას სკოლასა და ყოველდღიურ ცხოვრებაში.",
@@ -1143,6 +1213,11 @@
 
             admin_mairie_trad: "مدني ثبت او د ښاروالۍ خدمتونه",
             asbh_intro_trad: 'په فورباخ کې د ASBH ټولنیز مرکزونه فعالیتونه، ورکشاپونه او د لیدنو فرصتونه برابروي. د شته پروګرامونو د معلومولو لپاره له مرکز سره اړیکه ونیسئ.',
+            culture_intro_trad: "په فورباخ کې دا ځایونه له خلکو سره د لیدو، په فعالیتونو کې د ګډون او د کلتور د پېژندلو فرصت برابروي.",
+            media_forbach_trad: "رسنیز کتابتون کتابونه، ډیجیټلي سرچینې او فعالیتونه لري. د فعالیتونو او نوم‌لیکنې په اړه پوښتنه وکړئ.",
+            syna_forbach_trad: "La Syna د بېلابېلو کلتورونو د پېژندلو لپاره نندارې، نندارتونونه او پروګرامونه جوړوي. پروګرام وګورئ.",
+            ludo_forbach_trad: "د لوبو کتابتون د ۰ تر ۶ کلونو ماشومانو ته لوبې او فعالیتونه برابروي. د والدینو لپاره هم د لیدو وختونه لري.",
+            culture_more_trad: "د ډیجیټلي کلتورونو کور، Le Carreau او کنسرواتوار نور کلتوري فعالیتونه لري.",
             admin_ft_trad: 'د کار لټون، نوم\u200cلیکنه او ملاتړ',
             admin_caf_trad: 'د کورنۍ مرستې، کور او د CAF چارې',
             intro_text: "د بلیز پاسکال لېسې ته ښه راغلاست! دا اپلېکېشن د OEPRE درې برخې درپېژني: د فرانسوي ژبې زده کړه، د جمهوریت د ارزښتونو ښه پوهېدل، او په ښوونځي او ورځني ژوند کې د خپلو کارونو په ترسره کولو کې خپلواکي ترلاسه کول.",
@@ -1215,6 +1290,11 @@
 
             admin_mairie_trad: "Акты гражданского состояния и муниципальные службы",
             asbh_intro_trad: 'В Форбахе социальные центры ASBH предлагают мероприятия, мастерские и встречи. Свяжитесь с центром, чтобы узнать, что проводится.',
+            culture_intro_trad: "В Форбаке эти места помогают знакомиться с людьми, участвовать в мероприятиях и узнавать о культуре.",
+            media_forbach_trad: "Медиатека предлагает книги, цифровые ресурсы и мероприятия. Узнайте о занятиях и записи.",
+            syna_forbach_trad: "La Syna проводит спектакли, выставки и мероприятия, знакомящие с разными культурами. Смотрите программу.",
+            ludo_forbach_trad: "Игротека предлагает игры и занятия для детей от 0 до 6 лет. Для родителей также проходят встречи.",
+            culture_more_trad: "Дом цифровых культур, Le Carreau и консерватория предлагают другие культурные мероприятия.",
             admin_ft_trad: 'Поиск работы, регистрация и сопровождение',
             admin_caf_trad: 'Пособия семьям, жильё и услуги CAF',
             intro_text: "Добро пожаловать в лицей Блеза Паскаля! Это приложение знакомит вас с тремя направлениями OEPRE: изучением французского языка, ценностями Республики и самостоятельностью в повседневных делах — в школе и за её пределами.",
@@ -1287,6 +1367,11 @@
 
             admin_mairie_trad: "Nüfus ve belediye hizmetleri",
             asbh_intro_trad: 'Forbach’ta ASBH sosyal merkezleri etkinlikler, atölyeler ve buluşmalar sunar. Neler yapıldığını öğrenmek için merkezle iletişime geçin.',
+            culture_intro_trad: "Forbach’ta bu yerler insanlarla tanışmanıza, etkinliklere katılmanıza ve kültürü keşfetmenize yardımcı olur.",
+            media_forbach_trad: "Mediathèque kitaplar, dijital kaynaklar ve etkinlikler sunar. Etkinlikleri ve kayıt koşullarını sorun.",
+            syna_forbach_trad: "La Syna farklı kültürleri tanıtan gösteriler, sergiler ve etkinlikler düzenler. Programı inceleyin.",
+            ludo_forbach_trad: "Oyuncak kütüphanesi 0–6 yaş çocuklara oyun ve etkinlikler sunar. Ebeveynler için de buluşmalar düzenlenir.",
+            culture_more_trad: "Maison des Cultures Numériques, Le Carreau ve konservatuvar başka kültürel etkinlikler sunar.",
             admin_ft_trad: 'İş arama, kayıt ve destek',
             admin_caf_trad: 'Aile yardımları, konut ve CAF işlemleri',
             intro_text: "Lycée Blaise Pascal’e hoş geldiniz! Bu uygulama OEPRE’nin üç alanını tanıtır: Fransızca öğrenmek, Cumhuriyet’in değerlerini daha iyi anlamak ve okulda ve günlük yaşamda yapılması gereken işleri daha bağımsız yürütmek.",
@@ -1357,6 +1442,11 @@
 
             admin_mairie_trad: "Цивільний стан і муніципальні послуги",
             asbh_intro_trad: 'У Форбаху соціальні центри ASBH пропонують заходи, майстерні та зустрічі. Зв’яжіться з центром, щоб дізнатися про доступні заняття.',
+            culture_intro_trad: "У Форбаху ці місця допомагають знайомитися з людьми, брати участь у заходах і відкривати для себе культуру.",
+            media_forbach_trad: "Медіатека пропонує книжки, цифрові ресурси та заходи. Дізнайтеся про активності й реєстрацію.",
+            syna_forbach_trad: "La Syna організовує вистави, виставки та події, присвячені різним культурам. Перегляньте програму.",
+            ludo_forbach_trad: "Ігротека пропонує ігри та заняття для дітей від 0 до 6 років. Для батьків також проводять зустрічі.",
+            culture_more_trad: "Maison des Cultures Numériques, Le Carreau та консерваторія пропонують інші культурні заходи.",
             admin_ft_trad: 'Пошук роботи, реєстрація та супровід',
             admin_caf_trad: 'Допомога сім’ям, житло та послуги CAF',
             intro_text: "Ласкаво просимо до ліцею Блеза Паскаля! Цей застосунок знайомить вас із трьома напрямами OEPRE: вивченням французької мови, кращим розумінням цінностей Республіки та самостійністю у повсякденних справах — у школі й поза нею.",
@@ -1402,7 +1492,7 @@
         {entry:"Axe 3 · Pronote et messages de l’école",translationIndex:4,questionA1:"Je ne comprends pas une phrase du bulletin. Que demander à l’IA ?",questionA2:"Vous ne comprenez pas une appréciation du bulletin. Quelle demande est la plus sûre à l’IA ?",options:["Envoyer le bulletin avec le nom, les notes et les codes Pronote.","Copier une phrase sans nom ni note, demander une explication simple et une question à poser au professeur.","Donner le mot de passe Pronote à l’IA."],correct:1,feedback:"Retirez les noms, les notes et les identifiants. Demandez une explication, puis vérifiez avec l’école."},
         {entry:"Axe 3 · demander un rendez-vous",translationIndex:3,questionA1:"Je veux un rendez-vous avec le professeur. Que faire ?",questionA2:"Vous souhaitez parler avec le professeur du suivi scolaire de votre enfant. Quelle démarche pouvez-vous entreprendre ?",options:["Attendre que l’école vous appelle.","Demander des informations, poser des questions ou demander un rendez-vous.","Laisser l’enfant parler seul avec l’école."],correct:1,feedback:"Les parents ont le droit d’être informés et de s’exprimer sur la scolarité de leur enfant. La famille et l’école coopèrent."},
         {entry:"Ressource pratique · annuaire des administrations",translationIndex:5,questionA1:"Je cherche une aide pour ma famille ou mon logement. Quelle administration choisir ?",questionA2:"Une famille cherche à connaître les aides auxquelles elle peut prétendre pour les enfants ou le logement. Quel service consulter ?",options:["La CPAM, pour l’assurance maladie.","La CAF, pour les aides aux familles et au logement.","France Travail, pour chercher un emploi."],correct:1,feedback:"La CAF concerne les aides aux familles et au logement. La CPAM concerne la santé ; France Travail, l’emploi."},
-        {entry:"Ressource pratique · centres sociaux et vie locale",translationIndex:6,questionA1:"Je cherche une activité à Forbach. Quelle entrée ouvrir ?",questionA2:"Vous souhaitez trouver un atelier ou un lieu de rencontre près de chez vous, à Forbach. Quelle partie de l’application consulter ?",options:["Annuaire des administrations.","Centres sociaux et vie locale.","Urgences."],correct:1,feedback:"Cette entrée présente les centres sociaux ASBH de Bellevue, du Bruch et du Wiesberg, à Forbach."},
+        {entry:"Ressource pratique · vie sociale et culturelle",translationIndex:6,questionA1:"Je cherche une activité à Forbach. Quelle entrée ouvrir ?",questionA2:"Vous souhaitez trouver un atelier ou un lieu de rencontre près de chez vous, à Forbach. Quelle partie de l’application consulter ?",options:["Annuaire des administrations.","Vie sociale et culturelle.","Urgences."],correct:1,feedback:"Cette entrée présente les centres ASBH, la ludothèque, la médiathèque et La Syna."},
         {entry:"Ressource pratique · urgences",translationIndex:7,questionA1:"Une personne a besoin d’une aide médicale urgente. Quel numéro appeler ?",questionA2:"Une personne près de vous présente un problème médical urgent. Quel numéro appeler en France ou en Europe ?",options:["3949, France Travail.","03 87 84 30 00, la mairie.","15, le SAMU, ou 112, le numéro européen."],correct:2,feedback:"Pour une urgence médicale, appelez le 15. Le 112 est le numéro d’urgence européen."}
     ];
 
@@ -1415,7 +1505,7 @@
         3:["Attendre l’appel de l’école.","Demander une information ou un rendez-vous.","Laisser l’enfant parler seul."],
         4:["Envoyer le bulletin avec mon nom et mes notes.","Copier une phrase sans nom ni note.","Donner mon mot de passe Pronote."],
         5:["CPAM : santé.","CAF : famille et logement.","France Travail : emploi."],
-        6:["Annuaire des administrations.","Centres sociaux et vie locale.","Urgences."],
+        6:["Annuaire des administrations.","Vie sociale et culturelle.","Urgences."],
         7:["3949 : France Travail.","03 87 84 30 00 : la mairie.","15 : SAMU. 112 : urgence en Europe."]
     };
 
@@ -1430,7 +1520,7 @@
                 ["Dëshironi të ndiqni më mirë shkollimin e fëmijës. Çfarë mund të bëni?","Të prisni derisa shkolla t’ju telefonojë.","Të kërkoni informacion, të bëni pyetje ose të kërkoni takim.","Ta lini fëmijën të flasë vetëm me shkollën.","Prindërit kanë të drejtë të informohen dhe të shprehen për shkollimin e fëmijës. Familja dhe shkolla bashkëpunojnë."],
                 ["Nuk kuptoni një vlerësim në dëftesë. Cila kërkesë ndaj IA-së është më e sigurt?","Të dërgoni dëftesën me emrin, notat dhe të dhënat e Pronote.","Të kopjoni një fjali pa emër e pa notë dhe të kërkoni shpjegim të thjeshtë.","T’i jepni IA-së fjalëkalimin e Pronote.","Hiqni emrat, notat dhe të dhënat e hyrjes. Kërkoni shpjegim, pastaj verifikojeni me shkollën."],
                 ["Një familje kërkon ndihmë për familjen ose banesën. Cilin shërbim duhet të shohë?","CPAM, për sigurimin shëndetësor.","CAF, për ndihmat familjare dhe banesën.","France Travail, për kërkim pune.","CAF merret me ndihmat familjare dhe banesën. CPAM me shëndetin; France Travail me punësimin."],
-                ["Kërkoj një aktivitet ose vend takimi në Forbach. Cilin seksion duhet të hap?","Direktorinë e administratave.","Qendrat sociale dhe jeta lokale.","Urgjencat.","Ky seksion paraqet qendrat sociale ASBH në Bellevue, Bruch dhe Wiesberg, në Forbach."],
+                ["Kërkoj një aktivitet ose vend takimi në Forbach. Cilin seksion duhet të hap?","Direktorinë e administratave.","Jeta sociale dhe kulturore.","Urgjencat.","Ky seksion paraqet qendrat ASBH, ludotekën, mediatekën dhe La Syna-n."],
                 ["Një person ka nevojë urgjente për ndihmë mjekësore. Cilin numër duhet të telefononi?","3949, France Travail.","03 87 84 30 00, bashkia.","15, SAMU, ose 112, numri evropian.","Për urgjencë mjekësore telefononi 15. 112 është numri evropian i urgjencës."]
             ]
         },
@@ -1443,7 +1533,7 @@
                 ["You want to follow your child’s schooling more closely. What can you do?","Wait for the school to call you.","Ask for information, ask questions, or request a meeting.","Let your child speak with the school alone.","Parents have the right to information and to express themselves about their child’s schooling. Families and schools work together."],
                 ["You do not understand a report comment. Which request to AI is safest?","Send the report with the name, grades, and Pronote details.","Copy one sentence without a name or grade and ask for a simple explanation.","Give AI your Pronote password.","Remove names, grades, and login details. Ask for an explanation, then check it with the school."],
                 ["A family needs help with family benefits or housing. Which service should they check?","CPAM, for health insurance.","CAF, for family benefits and housing.","France Travail, for finding a job.","CAF deals with family benefits and housing. CPAM is for health; France Travail is for employment."],
-                ["I am looking for an activity or a place to meet people in Forbach. Which section should I open?","Directory of public services.","Community centers and local life.","Emergencies.","This section lists the ASBH community centers in Bellevue, Bruch, and Wiesberg in Forbach."],
+                ["I am looking for an activity or a place to meet people in Forbach. Which section should I open?","Directory of public services.","Social and cultural life.","Emergencies.","This section introduces ASBH centres, the play library, the media library, and La Syna."],
                 ["Someone needs urgent medical help. Which number should you call?","3949, France Travail.","03 87 84 30 00, the town hall.","15, SAMU, or 112, the European emergency number.","For a medical emergency, call 15. 112 is the European emergency number."]
             ]
         },
@@ -1456,7 +1546,7 @@
                 ["تريدون متابعة دراسة طفلكم بشكل أفضل. ماذا يمكنكم أن تفعلوا؟","انتظار اتصال المدرسة بكم.","طلب معلومات أو طرح أسئلة أو طلب موعد.","ترك الطفل يتحدث وحده مع المدرسة.","للأهل حق الحصول على المعلومات والتعبير عن رأيهم في دراسة طفلهم. تتعاون الأسرة والمدرسة."],
                 ["لا تفهمون ملاحظة في كشف العلامات. ما الطلب الأكثر أماناً من الذكاء الاصطناعي؟","إرسال الكشف مع الاسم والعلامات وبيانات Pronote.","نسخ جملة دون اسم أو علامة وطلب شرح بسيط.","إعطاء الذكاء الاصطناعي كلمة مرور Pronote.","احذفوا الأسماء والعلامات وبيانات الدخول. اطلبوا شرحاً ثم تحققوا من المدرسة."],
                 ["تحتاج أسرة إلى مساعدة عائلية أو سكن. أي جهة تبحث عنها؟","CPAM، للتأمين الصحي.","CAF، للمساعدات العائلية والسكن.","France Travail، للبحث عن عمل.","تهتم CAF بالمساعدات العائلية والسكن. وتهتم CPAM بالصحة وFrance Travail بالعمل."],
-                ["أبحث عن نشاط أو مكان للقاء الناس في فورباك. أي قسم أفتح؟","دليل الإدارات.","المراكز الاجتماعية والحياة المحلية.","الطوارئ.","يعرض هذا القسم مراكز ASBH في أحياء Bellevue وBruch وWiesberg في فورباك."],
+                ["أبحث عن نشاط أو مكان للقاء الناس في فورباك. أي قسم أفتح؟","دليل الإدارات.","الحياة الاجتماعية والثقافية.","الطوارئ.","يعرض هذا القسم مراكز ASBH ومكتبة الألعاب والمكتبة الإعلامية وLa Syna."],
                 ["يحتاج شخص إلى مساعدة طبية عاجلة. أي رقم تتصلون به؟","3949، France Travail.","03 87 84 30 00، البلدية.","15 للإسعاف الطبي SAMU أو 112، رقم الطوارئ الأوروبي.","للطوارئ الطبية اتصلوا بالرقم 15. والرقم 112 هو رقم الطوارئ الأوروبي."]
             ]
         },
@@ -1469,7 +1559,7 @@
                 ["Ցանկանում եք ավելի լավ հետևել ձեր երեխայի ուսմանը։ Ի՞նչ կարող եք անել։","Սպասել, մինչև դպրոցը զանգի ձեզ։","Տեղեկություն խնդրել, հարցեր տալ կամ հանդիպում խնդրել։","Երեխային թողնել, որ միայնակ խոսի դպրոցի հետ։","Ծնողներն իրավունք ունեն տեղեկություն ստանալու և արտահայտվելու երեխայի ուսման մասին։ Ընտանիքն ու դպրոցը համագործակցում են։"],
                 ["Չեք հասկանում առաջադիմության թերթիկի մեկնաբանությունը։ ԱԲ-ին ո՞ր խնդրանքն է ավելի անվտանգ։","Ուղարկել թերթիկը անունով, գնահատականներով և Pronote-ի տվյալներով։","Պատճենել մի նախադասություն առանց անվան ու գնահատականի և պարզ բացատրություն խնդրել։","ԱԲ-ին տալ Pronote-ի գաղտնաբառը։","Հեռացրեք անունները, գնահատականներն ու մուտքի տվյալները։ Բացատրություն խնդրեք, ապա ստուգեք դպրոցի հետ։"],
                 ["Ընտանիքը օգնության կարիք ունի ընտանեկան նպաստների կամ բնակարանի հարցում։ Ո՞ր ծառայությունն ընտրել։","CPAM՝ առողջության ապահովագրության համար։","CAF՝ ընտանեկան նպաստների և բնակարանի համար։","France Travail՝ աշխատանք փնտրելու համար։","CAF-ը զբաղվում է ընտանեկան նպաստներով և բնակարանով։ CPAM-ը՝ առողջությամբ, France Travail-ը՝ աշխատանքով։"],
-                ["Փնտրում եմ միջոցառում կամ մարդկանց հանդիպելու վայր Ֆորբախում։ Ո՞ր բաժինը բացել։","Պետական վարչությունների տեղեկատուն։","Սոցիալական կենտրոններ և տեղական կյանք։","Արտակարգ իրավիճակներ։","Այս բաժնում ներկայացված են Ֆորբախի Bellevue, Bruch և Wiesberg թաղամասերի ASBH կենտրոնները։"],
+                ["Փնտրում եմ միջոցառում կամ մարդկանց հանդիպելու վայր Ֆորբախում։ Ո՞ր բաժինը բացել։","Պետական վարչությունների տեղեկատուն։","Սոցիալական և մշակութային կյանք։","Արտակարգ իրավիճակներ։","Այս բաժնում ներկայացված են ASBH կենտրոնները, խաղադարանը, մեդիագրադարանը և La Syna-ն։"],
                 ["Մարդն անհապաղ բժշկական օգնության կարիք ունի։ Ո՞ր համարին զանգահարել։","3949՝ France Travail։","03 87 84 30 00՝ քաղաքապետարան։","15՝ SAMU, կամ 112՝ եվրոպական շտապ օգնության համար։","Բժշկական արտակարգ իրավիճակում զանգահարեք 15։ 112-ը եվրոպական շտապ օգնության համարն է։"]
             ]
         },
@@ -1482,7 +1572,7 @@
                 ["می‌خواهید تحصیل فرزندتان را بهتر دنبال کنید. چه کاری می‌توانید انجام دهید؟","منتظر بمانم تا مدرسه با من تماس بگیرد.","اطلاعات یا وقت ملاقات بخواهم و پرسش کنم.","بگذارم فرزندم تنها با مدرسه صحبت کند.","والدین حق دارند دربارهٔ تحصیل فرزندشان اطلاعات بگیرند و نظر بدهند. خانواده و مدرسه همکاری می‌کنند."],
                 ["توضیح کارنامه را نمی‌فهمید. کدام درخواست از هوش مصنوعی امن‌تر است؟","کارنامه را با نام، نمره‌ها و اطلاعات Pronote بفرستم.","یک جمله را بدون نام و نمره کپی کنم و توضیح ساده بخواهم.","رمز Pronote را به هوش مصنوعی بدهم.","نام‌ها، نمره‌ها و اطلاعات ورود را حذف کنید. توضیح بخواهید و سپس با مدرسه بررسی کنید."],
                 ["یک خانواده برای کمک‌های خانوادگی یا مسکن به راهنمایی نیاز دارد. کدام اداره را ببیند؟","CPAM برای بیمهٔ درمانی.","CAF برای کمک‌های خانوادگی و مسکن.","France Travail برای جست‌وجوی کار.","CAF دربارهٔ کمک‌های خانوادگی و مسکن است. CPAM دربارهٔ سلامت و France Travail دربارهٔ کار است."],
-                ["در فورباخ دنبال فعالیت یا جایی برای دیدار با مردم هستم. کدام بخش را باز کنم؟","راهنمای اداره‌های دولتی.","مرکزهای اجتماعی و زندگی محلی.","وضعیت‌های اضطراری.","این بخش مرکزهای اجتماعی ASBH در محله‌های Bellevue، Bruch و Wiesberg فورباخ را معرفی می‌کند."],
+                ["در فورباخ دنبال فعالیت یا جایی برای دیدار با مردم هستم. کدام بخش را باز کنم؟","راهنمای اداره‌های دولتی.","زندگی اجتماعی و فرهنگی.","وضعیت‌های اضطراری.","این بخش مرکزهای ASBH، کتابخانه بازی، کتابخانه رسانه‌ای و La Syna را معرفی می‌کند."],
                 ["یک نفر به کمک فوری پزشکی نیاز دارد. با کدام شماره تماس بگیرید؟","3949، France Travail.","03 87 84 30 00، شهرداری.","15، SAMU، یا 112، شمارهٔ اضطراری اروپا.","برای فوریت پزشکی با 15 تماس بگیرید. 112 شمارهٔ اضطراری اروپا است."]
             ]
         },
@@ -1495,7 +1585,7 @@
                 ["გსურთ უკეთ ადევნოთ თვალი თქვენი შვილის სწავლას. რისი გაკეთება შეგიძლიათ?","დაველოდო, სანამ სკოლა დამირეკავს.","მოვითხოვო ინფორმაცია, დავსვა კითხვა ან შეხვედრა ვითხოვო.","ბავშვს მარტო ვესაუბრო სკოლასთან.","მშობლებს აქვთ უფლება მიიღონ ინფორმაცია და გამოთქვან აზრი ბავშვის სწავლაზე. ოჯახი და სკოლა თანამშრომლობენ."],
                 ["ნიშნების ფურცლის შეფასება არ გესმით. ხელოვნურ ინტელექტს რომელი თხოვნაა უფრო უსაფრთხო?","გავუგზავნო ფურცელი სახელით, ნიშნებით და Pronote-ის მონაცემებით.","გადავაკოპირო ერთი წინადადება სახელისა და ნიშნის გარეშე და მარტივი ახსნა ვთხოვო.","ხელოვნურ ინტელექტს Pronote-ის პაროლი მივცე.","წაშალეთ სახელები, ნიშნები და შესვლის მონაცემები. ახსნა ითხოვეთ, შემდეგ სკოლასთან გადაამოწმეთ."],
                 ["ოჯახს სჭირდება დახმარება საოჯახო შეღავათებზე ან საცხოვრებელზე. რომელ სამსახურს მიმართოს?","CPAM-ს, ჯანმრთელობის დაზღვევისთვის.","CAF-ს, საოჯახო დახმარებისა და საცხოვრებლისთვის.","France Travail-ს, სამსახურის საძიებლად.","CAF საოჯახო დახმარებასა და საცხოვრებელს ეხება. CPAM — ჯანმრთელობას, France Travail — დასაქმებას."],
-                ["ფორბახში აქტივობას ან ადამიანებთან შეხვედრის ადგილს ვეძებ. რომელი განყოფილება გავხსნა?","ადმინისტრაციების ცნობარი.","სოციალური ცენტრები და ადგილობრივი ცხოვრება.","გადაუდებელი შემთხვევები.","ეს განყოფილება ფორბახის Bellevue-ს, Bruch-ისა და Wiesberg-ის ASBH სოციალურ ცენტრებს წარმოგიდგენთ."],
+                ["ფორბახში აქტივობას ან ადამიანებთან შეხვედრის ადგილს ვეძებ. რომელი განყოფილება გავხსნა?","ადმინისტრაციების ცნობარი.","სოციალური და კულტურული ცხოვრება.","გადაუდებელი შემთხვევები.","ეს განყოფილება ASBH-ის ცენტრებს, სათამაშო ბიბლიოთეკას, მედიათეკასა და La Syna-ს წარმოგიდგენთ."],
                 ["ადამიანს გადაუდებელი სამედიცინო დახმარება სჭირდება. რომელ ნომერზე დარეკოთ?","3949, France Travail.","03 87 84 30 00, მერია.","15, SAMU, ან 112, ევროპის საგანგებო ნომერი.","სამედიცინო გადაუდებელ შემთხვევაში დარეკეთ 15-ზე. 112 ევროპის საგანგებო ნომერია."]
             ]
         },
@@ -1508,7 +1598,7 @@
                 ["غواړئ د خپل ماشوم زده‌کړه ښه تعقیب کړئ. څه کولی شئ؟","انتظار وکړم چې ښوونځی راته زنګ ووهي.","معلومات وغواړم، پوښتنه وکړم یا د لیدنې غوښتنه وکړم.","ماشوم یوازې له ښوونځي سره خبرو ته پرېږدم.","والدین د معلوماتو اخیستو او د ماشوم د زده‌کړې په اړه د نظر ویلو حق لري. کورنۍ او ښوونځی همکاري کوي."],
                 ["د نمرو د راپور یوه تبصره نه پوهېږئ. له مصنوعي ځیرکتیا کومه غوښتنه خوندي ده؟","د راپور عکس له نوم، نمرو او Pronote معلوماتو سره ولېږم.","یوه جمله بې له نوم او نمرې ولیکم او ساده تشریح وغواړم.","د Pronote پټنوم مصنوعي ځیرکتیا ته ورکړم.","نومونه، نمرې او د ننوتلو معلومات لرې کړئ. تشریح وغواړئ او بیا یې له ښوونځي سره تایید کړئ."],
                 ["یوه کورنۍ د کورنۍ مرستې یا کور په اړه مرسته غواړي. په لارښود کې کوم خدمت وګوري؟","CPAM، د روغتیا بیمې لپاره.","CAF، د کورنۍ مرستې او کور لپاره.","France Travail، د کار موندلو لپاره.","CAF د کورنۍ مرستې او کور پورې اړه لري. CPAM روغتیا او France Travail د کار لپاره دی."],
-                ["په فورباخ کې د فعالیت یا د خلکو د لیدو ځای لټوم. کومه برخه پرانیزم؟","د ادارو لارښود.","ټولنیز مرکزونه او سیمه‌ییز ژوند.","بیړني حالتونه.","دا برخه په فورباخ کې د Bellevue، Bruch او Wiesberg د ASBH ټولنیز مرکزونه ښيي."],
+                ["په فورباخ کې د فعالیت یا د خلکو د لیدو ځای لټوم. کومه برخه پرانیزم؟","د ادارو لارښود.","ټولنیز او کلتوري ژوند.","بیړني حالتونه.","دا برخه د ASBH مرکزونه، د لوبو کتابتون، رسنیز کتابتون او La Syna ښيي."],
                 ["یو کس بېړنۍ طبي مرستې ته اړتیا لري. کومې شمېرې ته زنګ ووهئ؟","3949، France Travail.","03 87 84 30 00، ښاروالۍ.","15، SAMU، یا 112، د اروپا بېړنۍ شمېره.","د طبي بېړني حالت لپاره 15 ته زنګ ووهئ. 112 د اروپا بېړنۍ شمېره ده."]
             ]
         },
@@ -1521,7 +1611,7 @@
                 ["Вы хотите лучше следить за учёбой ребёнка. Что можно сделать?","Ждать, пока школа вам позвонит.","Запросить информацию, задать вопросы или попросить о встрече.","Пусть ребёнок общается со школой один.","Родители имеют право получать информацию и высказываться об учёбе ребёнка. Семья и школа сотрудничают."],
                 ["Вы не понимаете комментарий в табеле. Какая просьба к ИИ безопаснее?","Отправить табель с именем, оценками и данными Pronote.","Скопировать фразу без имени и оценки, попросить простое объяснение.","Передать ИИ пароль Pronote.","Удалите имена, оценки и данные для входа. Попросите объяснение, затем уточните его в школе."],
                 ["Семья ищет помощь с семейными выплатами или жильём. Какую службу выбрать?","CPAM — медицинское страхование.","CAF — семейные выплаты и жильё.","France Travail — поиск работы.","CAF занимается семейными выплатами и жильём. CPAM — здоровьем, France Travail — работой."],
-                ["Я ищу занятие или место для встреч в Форбаке. Какой раздел открыть?","Справочник администраций.","Социальные центры и местная жизнь.","Экстренная помощь.","В этом разделе указаны центры ASBH в районах Бельвю, Брюк и Визберг в Форбаке."],
+                ["Я ищу занятие или место для встреч в Форбаке. Какой раздел открыть?","Справочник администраций.","Социальная и культурная жизнь.","Экстренная помощь.","В этом разделе представлены центры ASBH, игротека, медиатека и La Syna."],
                 ["Человеку срочно нужна медицинская помощь. По какому номеру звонить?","3949 — France Travail.","03 87 84 30 00 — мэрия.","15 — SAMU или 112 — европейский номер экстренной помощи.","При неотложной медицинской ситуации звоните 15. 112 — европейский номер экстренной помощи."]
             ]
         },
@@ -1534,7 +1624,7 @@
                 ["Çocuğunuzun okul durumunu daha yakından takip etmek istiyorsunuz. Ne yapabilirsiniz?","Okulun sizi aramasını beklemek.","Bilgi istemek, soru sormak veya görüşme talep etmek.","Çocuğun okulla tek başına konuşmasını sağlamak.","Velilerin çocuğun eğitimi hakkında bilgi alma ve görüş bildirme hakkı vardır. Aile ve okul iş birliği yapar."],
                 ["Karne yorumunu anlamıyorsunuz. Yapay zekâya hangi istek daha güvenlidir?","Karnenin ad, notlar ve Pronote bilgileri olan fotoğrafını göndermek.","Ad ve not olmadan bir cümle kopyalayıp basitçe açıklamasını istemek.","Pronote şifresini yapay zekâya vermek.","Adları, notları ve giriş bilgilerini kaldırın. Açıklama isteyin ve sonra okulla doğrulayın."],
                 ["Bir aile, aile yardımı veya konut desteği arıyor. Rehberde hangi kuruma bakmalı?","Sağlık sigortası için CPAM.","Aile yardımı ve konut için CAF.","İş arama için France Travail.","CAF aile yardımı ve konutla ilgilenir. CPAM sağlıkla, France Travail işle ilgilenir."],
-                ["Forbach’ta bir etkinlik ya da insanlarla buluşma yeri arıyorum. Hangi bölümü açmalıyım?","Kamu kurumları rehberi.","Sosyal merkezler ve yerel yaşam.","Acil durumlar.","Bu bölüm Forbach’taki Bellevue, Bruch ve Wiesberg ASBH sosyal merkezlerini gösterir."],
+                ["Forbach’ta bir etkinlik ya da insanlarla buluşma yeri arıyorum. Hangi bölümü açmalıyım?","Kamu kurumları rehberi.","Sosyal ve kültürel yaşam.","Acil durumlar.","Bu bölüm ASBH merkezlerini, oyuncak kütüphanesini, mediathèque’i ve La Syna’yı tanıtır."],
                 ["Birinin acil tıbbi yardıma ihtiyacı var. Hangi numarayı aramalısınız?","3949, France Travail.","03 87 84 30 00, belediye.","15, SAMU, veya 112, Avrupa acil numarası.","Tıbbi acil durumda 15’i arayın. 112 Avrupa acil numarasıdır."]
             ]
         },
@@ -1547,7 +1637,7 @@
                 ["Ви хочете краще стежити за навчанням дитини. Що можна зробити?","Чекати, поки школа вам зателефонує.","Попросити інформацію, поставити запитання або попросити про зустріч.","Дозволити дитині говорити зі школою самій.","Батьки мають право отримувати інформацію та висловлюватися щодо навчання дитини. Сім’я і школа співпрацюють."],
                 ["Ви не розумієте відгук у табелі. Яке прохання до ШІ безпечніше?","Надіслати табель з ім’ям, оцінками та даними Pronote.","Скопіювати речення без імені й оцінки та попросити просте пояснення.","Надати ШІ пароль Pronote.","Приберіть імена, оцінки й дані входу. Попросіть пояснення, а потім уточніть у школі."],
                 ["Сім’я шукає допомогу для родини або житла. До якої служби звернутися?","CPAM — медичне страхування.","CAF — допомога сім’ям і житло.","France Travail — пошук роботи.","CAF займається допомогою сім’ям і житлом. CPAM — здоров’ям, France Travail — працевлаштуванням."],
-                ["Я шукаю заняття або місце для зустрічей у Форбаху. Який розділ відкрити?","Довідник адміністрацій.","Соціальні центри та місцеве життя.","Невідкладна допомога.","У цьому розділі є центри ASBH у районах Bellevue, Bruch і Wiesberg у Форбаху."],
+                ["Я шукаю заняття або місце для зустрічей у Форбаху. Який розділ відкрити?","Довідник адміністрацій.","Соціальне та культурне життя.","Невідкладна допомога.","У цьому розділі представлені центри ASBH, ігротека, медіатека та La Syna."],
                 ["Людині терміново потрібна медична допомога. За яким номером телефонувати?","3949 — France Travail.","03 87 84 30 00 — мерія.","15 — SAMU або 112 — європейський номер екстреної допомоги.","У разі невідкладної медичної ситуації телефонуйте 15. 112 — європейський номер екстреної допомоги."]
             ]
         }
@@ -1788,6 +1878,15 @@
                 translated.className = 'text-xs font-semibold text-slate-700';
                 translated.setAttribute('data-i18n', key);
                 content.appendChild(translated);
+                const audio = document.createElement('button');
+                audio.type = 'button';
+                audio.className = 'btn-audio flex items-center text-xs font-black px-3 py-2 rounded-xl border w-full justify-center text-indigo-600 bg-indigo-50 border-indigo-100 mt-2';
+                audio.dataset.audioKey = key;
+                audio.dataset.audioLang = langKey;
+                audio.setAttribute('aria-pressed', 'false');
+                audio.innerHTML = '<span class="mr-2 audio-icon" aria-hidden="true">🔊</span><span class="audio-text">Écouter en ' + nativeName + '</span>';
+                audio.onclick = () => playAudio(audio);
+                content.appendChild(audio);
                 button.onclick = () => toggleTrad(button, key);
                 el.after(button, content);
             }
