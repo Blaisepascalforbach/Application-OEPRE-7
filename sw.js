@@ -1,5 +1,5 @@
 // Service worker OEPRE : fonctionnement hors ligne (pages, icônes, polices, audio)
-const STATIC = 'oepre-static-v22', AUDIO = 'oepre-audio-v1';
+const STATIC = 'oepre-static-v25', AUDIO = 'oepre-audio-v1';
 const CORE = ['./', 'index.html', 'manifest.webmanifest', 'icons/icon-192.png', 'icons/icon-512.png'];
 const TAILWIND = 'https://cdn.tailwindcss.com';
 const FONTS = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap';

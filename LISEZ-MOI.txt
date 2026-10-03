@@ -5,10 +5,12 @@ Contenu du paquet :
 - sw.js : mise à jour hors ligne et prise en charge des MP3 ;
 - manifest.webmanifest et icônes.
 
-Dans la fiche « Le DELF et les démarches », le titre et l’explication restent affichés en français. La traduction apparaît uniquement lorsque l’on appuie sur le bouton de traduction.
+La page de garde met en avant le bandeau « Semaine de l’intégration 2026 » et le logo Blaise Pascal, placés sur deux lignes ; le titre « OEPRE Forbach » est réduit.
+
+Dans toutes les ressources, le français reste la langue de présentation. Les traductions sont des aides secondaires accessibles avec les boutons « Traduction en… ». Dans le test, le français apparaît en premier et la traduction dans la langue d’appui est affichée dessous. Les numéros d’urgence gardent leur intitulé français avec une courte aide traduite en dessous.
 
 Les boutons 🔊 utilisent les voix présentes sur le téléphone tant que les MP3 ne sont pas publiés. La disponibilité des langues dépend de l’appareil.
 
-Pour installer : décompressez ce paquet à la racine du dépôt GitHub Pages en remplaçant les fichiers existants, puis attendez le rechargement. Le cache v22 met l’application à jour. Si elle reste ancienne, fermez-la puis rouvrez-la.
+Pour installer : décompressez ce paquet à la racine du dépôt GitHub Pages en remplaçant les fichiers existants, puis attendez le rechargement. Le cache v25 met l’application à jour. Si elle reste ancienne, fermez-la puis rouvrez-la.
 
 Voix Google, plus tard : utilisez le fichier generateur-audio.html séparément sur votre ordinateur, choisissez index.html et saisissez la clé uniquement dans le générateur local. Ne publiez jamais le générateur ni la clé dans le dépôt. Décompressez ensuite le ZIP audio produit à la racine du dépôt (dossier audio/).
